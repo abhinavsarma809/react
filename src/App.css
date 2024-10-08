@@ -1,3 +1,148 @@
+/* Base Styles */
+* {
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Set a default font */
+  background-color: #f0f0f0; /* Light background for better visibility */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+  background-color: white; /* Add background color to card */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  flex: 1 1 300px; /* Allow cards to grow/shrink */
+  margin: 1rem; /* Add margin around cards */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+  justify-content: space-between; /* Distributes space between items */
+}
+
+#add {
+  width: 50px; /* Adjust size */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  bottom: 2rem; /* Space from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center the button */
+  border: 3px solid blue transparent;
+  border-radius: 50%;
+  background-color: blue;
+  color: white; /* Text color */
+  font-size: 1.5em; /* Larger font for button */
+}
+
+.displayColor {
+  display: flex;
+  gap: 5px;
+  justify-content: center; /* Center align the color options */
+  margin-top: 1rem;
+}
+
+/* Color Circle Styles */
+.color-circle {
+  border: 3px solid transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: paleturquoise;
+}
+
+#orange {
+  background-color: pink;
+}
+
+.container {
+  height: auto; /* Allow height to adjust based on content */
+  padding: 1rem; /* Add padding */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack items on smaller screens */
+  }
+
+  .logo {
+    height: 4em; /* Adjust logo size */
+  }
+
+  #add {
+    width: 40px; /* Adjust button size for smaller screens */
+    height: 40px;
+  }
+
+  .card {
+    flex: 1 1 100%; /* Make cards take full width */
+    margin: 0.5rem 0; /* Add vertical margin between cards */
+  }
+}
+
+@media (max-width: 480px) {
+  #add {
+    width: 35px; /* Further adjust button size */
+    height: 35px;
+  }
+
+  .logo {
+    height: 3em; /* Adjust logo size for very small screens */
+  }
+
+  .field, .field-2 {
+    width: 100%; /* Full width for input fields */
+    margin: 0; /* Remove margin */
+    padding: 10px; /* Adjust padding */
+  }
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -394,4 +539,149 @@
   padding-right: 20px; /* Add some padding for better spacing */
   margin: 10px 0; /* Add margin for spacing between elements */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Base Styles */
+* {
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Set a default font */
+  background-color: #f0f0f0; /* Light background for better visibility */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+  background-color: white; /* Add background color to card */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  flex: 1 1 300px; /* Allow cards to grow/shrink */
+  margin: 1rem; /* Add margin around cards */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+  justify-content: space-between; /* Distributes space between items */
+}
+
+#add {
+  width: 50px; /* Adjust size */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  bottom: 2rem; /* Space from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center the button */
+  border: 3px solid blue transparent;
+  border-radius: 50%;
+  background-color: blue;
+  color: white; /* Text color */
+  font-size: 1.5em; /* Larger font for button */
+}
+
+.displayColor {
+  display: flex;
+  gap: 5px;
+  justify-content: center; /* Center align the color options */
+  margin-top: 1rem;
+}
+
+/* Color Circle Styles */
+.color-circle {
+  border: 3px solid transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+#red {
+  background-color: red;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: paleturquoise;
+}
+
+#orange {
+  background-color: pink;
+}
+
+.container {
+  height: auto; /* Allow height to adjust based on content */
+  padding: 1rem; /* Add padding */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack items on smaller screens */
+  }
+
+  .logo {
+    height: 4em; /* Adjust logo size */
+  }
+
+  #add {
+    width: 40px; /* Adjust button size for smaller screens */
+    height: 40px;
+  }
+
+  .card {
+    flex: 1 1 100%; /* Make cards take full width */
+    margin: 0.5rem 0; /* Add vertical margin between cards */
+  }
+}
+
+@media (max-width: 480px) {
+  #add {
+    width: 35px; /* Further adjust button size */
+    height: 35px;
+  }
+
+  .logo {
+    height: 3em; /* Adjust logo size for very small screens */
+  }
+
+  .field, .field-2 {
+    width: 100%; /* Full width for input fields */
+    margin: 0; /* Remove margin */
+    padding: 10px; /* Adjust padding */
+  }
 }
