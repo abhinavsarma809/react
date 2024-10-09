@@ -3,8 +3,8 @@ body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif; /* Improved font for better readability */
+  background-color: #f4f4f4; /* Light background for contrast */
 }
 
 .app-container {
@@ -21,7 +21,7 @@ body, html {
   min-width: 300px; /* Minimum width for smaller screens */
   height: 100vh;
   border: 5px solid #dae5f5;
-  border-radius: 10px;
+  border-radius: 10px; /* Smoother corners */
   overflow-y: auto;
   font-size: larger;
   background-color: white;
@@ -29,7 +29,7 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 /* Notes section */
