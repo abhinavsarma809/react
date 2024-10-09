@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -24,9 +24,9 @@ function App() {
         .slice(0, 2);
 
       setGroups([...groups, { name: groupName, initials, color: selectedColor, notes: [] }]);
-      setGroupName(''); 
+      setGroupName('');
       setSelectedColor('');
-      setCountVisible(false); 
+      setCountVisible(false);
     }
   };
 
@@ -49,9 +49,9 @@ function App() {
 
       const updatedGroups = groups.map((group) => {
         if (group.name === selectedGroup.name) {
-          return { 
-            ...group, 
-            notes: [...group.notes, { text: notes, color: 'black', timestamp: formattedDate }] 
+          return {
+            ...group,
+            notes: [...group.notes, { text: notes, color: 'black', timestamp: formattedDate }],
           };
         }
         return group;
@@ -64,7 +64,7 @@ function App() {
 
       setGroups(updatedGroups);
       setSelectedGroup(updatedSelectedGroup);
-      setNotes(''); 
+      setNotes('');
     }
   };
 
@@ -111,7 +111,7 @@ function App() {
               {selectedGroup.notes.map((note, index) => (
                 <div key={index} className="note-item" style={{ backgroundColor: 'white', padding: '10px', marginBottom: '10px', borderRadius: '5px', color: note.color }}>
                   {note.text.split('\n').map((line, i) => (
-                    <p key={i}>{line}</p>  // Display each part of the note on a new line
+                    <p key={i}>{line}</p>  // Display each part of the note on a new line
                   ))}
                   <small style={{ color: 'gray', fontSize: 'smaller' }}>
                     {note.timestamp}
@@ -153,7 +153,7 @@ function App() {
               name="groupName"
               value={groupName}
               onChange={(e) => setGroupName(e.target.value)}
-              style={{ color: 'black' }} 
+              style={{ color: 'black' }}
             /><br />
 
             <p id="colour">Color:</p>
