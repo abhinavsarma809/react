@@ -18,7 +18,7 @@ body, html {
 /* Group list */
 .row {
   width: 50vh;
-  height: 120vh;
+  height: 100vh;
   border: 5px solid #dae5f5;
   border-radius: 10px; /* Smoother corners */
   overflow-y: auto;
@@ -28,14 +28,12 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-position: relative;
-bottom: 20px;/* Soft shadow for depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 /* Notes section */
 .c2 {
-  width: 1500px;
+  width: 1430px;
   background-color: #dae5f5;
   flex: 1; /* Allow .c2 to take the remaining space */
   display: flex;
@@ -45,9 +43,7 @@ bottom: 20px;/* Soft shadow for depth */
   position: relative;
   right: 20px;
   border: 3px solid #ccc; /* Lighter border for subtlety */
-  border-radius: 10px; 
-  position: relative;
-bottom: 20px;
+  border-radius: 10px; /* Smoother corners */
 }
 
 /* Button Styles */
@@ -217,7 +213,7 @@ bottom: 20px;
   width: 30%;
   margin-right: 1080px;
   position: relative;
-  bottom: 500px;
+  bottom: 300px;
 }
 .groupName{
   padding-bottom: 8px;
@@ -225,11 +221,12 @@ bottom: 20px;
 }
 
 #text{
-  margin-top: 60px;
+  margin-top: 30px;
   height: 20vh;
   margin-left: 10px;
 }
 .send-arrow{
   height:5vh;
-  margin-top: 230px;
+  margin-top: 160px;
 }
+
