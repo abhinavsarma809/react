@@ -135,7 +135,7 @@ function App() {
           </div>
         ) : (
           <div className="c2-content">
-            <img src={noteImage} id="node" alt="Note" />
+            <img src="src/Note.png" id="node" alt="Note" />
             <h2 id="poc">Pocket Notes</h2>
             <p id="send">
               <b>Send and receive messages without keeping your phone online.<br />

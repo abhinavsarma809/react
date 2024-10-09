@@ -59,10 +59,11 @@ body, html {
   font-size: 24px;
   border: none;
   cursor: pointer;
-  position: fixed; /* Fixed position for better visibility */
-  bottom: 120px;
-  right: 1600px;
-  transition: background-color 0.3s; /* Smooth transition */
+  margin-top: 600px;
+  margin-left: 300px;
+  
+  transition: background-color 0.3s; 
+  z-index: 10;/* Smooth transition */
 }
 
 #add:hover {
