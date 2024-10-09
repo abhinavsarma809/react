@@ -66,3 +66,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.note-input{
+  background-color:#001ead;
+  height: 30vh;
+  position: relative;
+  top: 50px;
+
+}

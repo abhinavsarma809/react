@@ -1,687 +1,235 @@
-/* Base Styles */
-* {
-  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+/* General Styles */
+body, html {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* Improved font for better readability */
+  background-color: #f4f4f4; /* Light background for contrast */
 }
 
-body {
-  font-family: Arial, sans-serif; /* Set a default font */
-  background-color: #f0f0f0; /* Light background for better visibility */
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
 }
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-.card {
-  padding: 2em;
-  background-color: white; /* Add background color to card */
-  border-radius: 8px; /* Slightly rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  flex: 1 1 300px; /* Allow cards to grow/shrink */
-  margin: 1rem; /* Add margin around cards */
-}
-
+/* Group list */
 .row {
-  display: flex;
-  flex-wrap: wrap; /* Allows items to wrap onto the next line */
-  justify-content: space-between; /* Distributes space between items */
-}
-
-#add {
-  width: 50px; /* Adjust size */
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: sticky;
-  bottom: 2rem; /* Space from the bottom */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center the button */
-  border: 3px solid blue transparent;
-  border-radius: 50%;
-  background-color: blue;
-  color: white; /* Text color */
-  font-size: 1.5em; /* Larger font for button */
-}
-
-.displayColor {
-  display: flex;
-  gap: 5px;
-  justify-content: center; /* Center align the color options */
-  margin-top: 1rem;
-}
-
-/* Color Circle Styles */
-.color-circle {
-  border: 3px solid transparent;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-}
-
-#red {
-  background-color: red;
-}
-
-#blue {
-  background-color: blue;
-}
-
-#yellow {
-  background-color: yellow;
-}
-
-#green {
-  background-color: paleturquoise;
-}
-
-#orange {
-  background-color: pink;
-}
-
-.container {
-  height: auto; /* Allow height to adjust based on content */
-  padding: 1rem; /* Add padding */
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column; /* Stack items on smaller screens */
-  }
-
-  .logo {
-    height: 4em; /* Adjust logo size */
-  }
-
-  #add {
-    width: 40px; /* Adjust button size for smaller screens */
-    height: 40px;
-  }
-
-  .card {
-    flex: 1 1 100%; /* Make cards take full width */
-    margin: 0.5rem 0; /* Add vertical margin between cards */
-  }
-}
-
-@media (max-width: 480px) {
-  #add {
-    width: 35px; /* Further adjust button size */
-    height: 35px;
-  }
-
-  .logo {
-    height: 3em; /* Adjust logo size for very small screens */
-  }
-
-  .field, .field-2 {
-    width: 100%; /* Full width for input fields */
-    margin: 0; /* Remove margin */
-    padding: 10px; /* Adjust padding */
-  }
-}
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-.row {
-  position: absolute;
-  top: -30px;
-  right: 1403px;
-  width: 30%;
-  border: 5px solid #dae5f5 ;
-  border-radius: 5%;
-  overflow-y: scroll;
+  width: 50vh;
+  height: 120vh;
+  border: 5px solid #dae5f5;
+  border-radius: 10px; /* Smoother corners */
+  overflow-y: auto;
   font-size: larger;
-  gap: 1rem;
-
-
   background-color: white;
   color: black;
-
-  min-height: 109vh; /* Use min-height to take full view height */
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: space-between; /* Push elements apart */
-
-}
-#note{
-  position: sticky;
-  padding-left: -10px;
-  top:77px;
-
-}
-#add {
-  width: 50px;
-  height: 50px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  position: sticky;
-  top: auto; /* Let the button's position flow naturally */
-  bottom: 200px; /* Space from the bottom */
-  left: 490px;
-  border: 3px solid blue transparent;
-  border-radius: 58%;
-  background-color: blue;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+position: relative;
+bottom: 20px;/* Soft shadow for depth */
 }
 
+/* Notes section */
 .c2 {
+  width: 1500px;
   background-color: #dae5f5;
-  min-height: 103vh; /* Ensure .c2 also takes full view height */
-  width: 270%;
+  flex: 1; /* Allow .c2 to take the remaining space */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 20px; /* Consistent padding */
   position: relative;
-  bottom: 100px;
-
-  right: 150px;
-  border: 3px solid;
- 
-}
-
-#node{
+  right: 20px;
+  border: 3px solid #ccc; /* Lighter border for subtlety */
+  border-radius: 10px; 
   position: relative;
-  background-color: aquamarine;
-  top: 270px;
-  right: 90px;
- 
+bottom: 20px;
 }
 
-#poc{
-  position: relative;
-  top: 250px;
-  right: 90px;
-
-  color: black;
-  
-}
-#send{
-  position: relative;
-  color: black;
-  top: 270px;
-  right: 100px;
-  
-  
-}
-
-.field {
-  margin-top: 20px;
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: white;
-  position: absolute;
-  top: 320px;
-  right: 980px;
-  color: black;
-  width: 400px;
-}
-
-
-
-
-#groupName{
-  position: relative;
-  left:-25px;
-  color: white;
-  background-color: white;
-  border: 3px solid black;
-  border-radius:10px ;
-}
-
-#group{
-  position: relative;
-  left: -105px;
-}
-
-#colour{
-  position: relative;
-  left: -140px;
-  top:3px
-}
-
-#red{
-  color: "red";
-  border: 3px solid transparent;
-  border-radius: 58%;
-  background-color: red;
-  width: 30px;
-  height: 30px;
-  font-size:xx-small;
-
-}
-
-
-#blue{
-
-  border: 3px solid transparent;
-  border-radius: 58%;
-  background-color: blue;
-  width: 30px;
-  height: 30px;
-  font-size:xx-small;
-
-}
-#yellow{
-  border: 3px solid transparent;
-  border-radius: 58%;
-  background-color: yellow;
-  width: 30px;
-  height: 30px;
-  font-size:xx-small;
-}
-#green{
-  border: 3px solid transparent;
-  border-radius: 58%;
-  background-color: paleturquoise;
-  width: 30px;
-  height: 30px;
-  font-size:xx-small;
-  
-}
-
-#orange{
-  border: 3px solid transparent;
-  border-radius: 58%;
-  background-color:pink;
-  width: 30px;
-  height: 30px;
-  font-size:xx-small;
-}
-.displayColor{
-  display: flex;
-  position: relative;
-  bottom: 37px;
-  left: 110px;
-  gap:5px;
-  
-}
-
-#Group{
-  position: relative;
-  right: 37px;
-}
-#plus{
-  position: absolute;
-  background-color: blue;
-  top:140px;
-  left:306px;
-  border:3px solid;
-  border-radius: 8px;
-}
-.group-item {
+/* Button Styles */
+#add {
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
-  padding: 10px;
-  margin: 10px 0;
-  width: 200px;
-  height: auto;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: blue;
   color: white;
-  border-radius: 5px;
-  position: relative;
-  justify-content: flex-start;
-  top:200px;
-  left: 200px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  position: fixed; /* Fixed position for better visibility */
+  bottom: 120px;
+  right: 1600px;
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
-.group-initials {
-  margin-right: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  border: 3px solid transparent;
-  border-radius: 58%;
-  width: 30px;
-  height: 30px;
-
-
+#add:hover {
+  background-color: darkblue; /* Change color on hover */
 }
 
-.group-fullname {
-  font-size: 16px;
-  color: black;
-}
-.container{
-  height: 90vh;
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    width: 100%;
+    border-radius: 0;
+    min-height: 50vh;
+  }
+
+  .c2 {
+    width: 100%;
+    padding: 10px;
+  }
 }
 
+/* Media Queries for Laptop */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .row {
+    width: 40%;
+  }
+
+  .c2 {
+    width: 60%;
+  }
+}
 
 .group-list {
-  position: absolute;
-  bottom: 930px; /* Ensures no extra margin */
-  max-height: 200px; /* Set a fixed height */
-  display: flex;
-  flex-direction: column; 
-  font-size: x-large;
-
-
- 
-
-}
-.app-container{
-  height: 81vh;
-}
-
-.notepad{
-  position: absolute;
-  background-color: white;
-  height: 107vh;
-  width: 900%;
-  left: -249px;
-  top: -10px;
-  border: 5px solid #dae5f5 ;
-  background-color: #dae5f5;
-}
-.note-input{
-  position: relative;
-  top:705px;
-  height: 25vh;
-  left: -px;
-  border: 5px solid;
-  background-color: #001ead;
-  
-  
-
-}
-.note-display{
-  color: black;
-  position:absolute;
-  max-height: 100vh;
-  left: 200px;
-  top:130px;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-
-  width:50% ;
-  background-color: #dae5f5;
- 
-  
-}
-#text{
-  width: 92%;
-  position: relative;
-  left: 8px;
-  top: 10px;
-  background-color: #f0f0f0;
-  height: 20vh;
-}
-.send-arrow{
-  position: relative;
-  left: 5px;
-  width: 1%;
- 
-}
-.group-header{
-  background-color: #001ead;
-  height: 10vh;
-
- 
-}
-.texts{
-  background-color:#dae5f5 ;
-}
-.group-header .group-initials {
-  position: relative;
-  right: 470px;
-  top: 10px;
-  border:5px solid transparent ;
-  border-radius:58%;   
-  width: 50px;
-  height: 50px;         /* Set font size */
-}
-.group-header .group-fullname {
-  position: relative;
-  right: 470px;
-  top: 10px;
-  border:3px solid transparent ;
-  border-radius: 58%;   
-  width: 40px;
-  height: 40px;       
-}
-
-.note-item{
-  background-color: #f9f9f9; 
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  word-wrap: break-word; /
-}
-.group-header .group-fullname {
-  color: white;
+  padding-left: 5em;
   font-size: xx-large;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;       /* Set font size */
-}
-.c2-contents{
-  position: relative;
-  left: 800px;
-  border: 3px solid;
-}
-.field-2{
-  margin-top: 20px;
-  background-color: #f0f0f0;
- 
-  border-radius: 5px;
-  background-color: white;
-  position: absolute;
-  top: 340px;
-  left: 10px;
-
-
-
-  color: black;
-  width: 390px;
-  border: 1px solid #ccc; /* Adjust color and width as needed */
-  border-radius: 5px; /* Makes the corners rounded */
-  padding-right: 20px; /* Add some padding for better spacing */
-  margin: 10px 0; /* Add margin for spacing between elements */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-/* Base Styles */
-* {
-  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
-  margin: 0;
-  padding: 0;
+  gap: 1em;
 }
 
-body {
-  font-family: Arial, sans-serif; /* Set a default font */
-  background-color: #f0f0f0; /* Light background for better visibility */
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-.card {
-  padding: 2em;
-  background-color: white; /* Add background color to card */
-  border-radius: 8px; /* Slightly rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  flex: 1 1 300px; /* Allow cards to grow/shrink */
-  margin: 1rem; /* Add margin around cards */
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap; /* Allows items to wrap onto the next line */
-  justify-content: space-between; /* Distributes space between items */
-}
-
-#add {
-  width: 50px; /* Adjust size */
-  height: 50px;
+/* Group initials style */
+.group-initials {
+  border: 3px solid transparent;
+  width: 30px; /* Adjusted width */
+  height: 30px; /* Adjusted height */
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: sticky;
-  bottom: 2rem; /* Space from the bottom */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center the button */
-  border: 3px solid blue transparent;
-  border-radius: 50%;
-  background-color: blue;
-  color: white; /* Text color */
-  font-size: 1.5em; /* Larger font for button */
+  justify-content: center; /* Center initials */
+  font-weight: bold; /* Make initials bold */
 }
 
-.displayColor {
-  display: flex;
-  gap: 5px;
-  justify-content: center; /* Center align the color options */
-  margin-top: 1rem;
-}
-
-/* Color Circle Styles */
-.color-circle {
+/* Color buttons */
+#red, #blue, #yellow, #green, #orange {
   border: 3px solid transparent;
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  font-size: xx-small;
 }
 
-#red {
-  background-color: red;
+#red { background-color: red; }
+#blue { background-color: blue; }
+#yellow { background-color: yellow; }
+#green { background-color: green; }
+#orange { background-color: orange; }
+
+/* Input Styles */
+#groupName, #text {
+  width: 95%; /* Ensure consistent width */
+  padding: 10px; /* Add padding for comfort */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ccc; /* Subtle border */
+  background-color: white; /* White background for clarity */
 }
 
-#blue {
-  background-color: blue;
+/* Group Header */
+.group-header {
+  background-color: #001ead;
+  font-size: xx-large;
+  padding: 10px 30px;
+  margin-bottom: 26px;
+  margin-top: -20px; /* Better padding for title */
+  border-radius: 10px; /* Smooth corners */
+  color: white; /* White text for contrast */
+  width: 148vh;
 }
 
-#yellow {
-  background-color: yellow;
-}
-
-#green {
-  background-color: paleturquoise;
-}
-
-#orange {
-  background-color: pink;
-}
-
-.container {
-  height: auto; /* Allow height to adjust based on content */
-  padding: 1rem; /* Add padding */
+/* Notes Container */
+.note-display {
+ 
   display: flex;
-  flex-direction: column; /* Stack content vertically */
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 10px; /* Smooth corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-height: 50vh; /* Limit height to avoid exceeding c2 container */
+  overflow-y: auto;
+  margin-left: 70px; /* Scroll vertically when content overflows */
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column; /* Stack items on smaller screens */
-  }
-
-  .logo {
-    height: 4em; /* Adjust logo size */
-  }
-
-  #add {
-    width: 40px; /* Adjust button size for smaller screens */
-    height: 40px;
-  }
-
-  .card {
-    flex: 1 1 100%; /* Make cards take full width */
-    margin: 0.5rem 0; /* Add vertical margin between cards */
-  }
+/* Individual Note Item */
+.note-item {
+  background-color: white; 
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+  word-wrap: break-word; 
 }
 
-@media (max-width: 480px) {
-  #add {
-    width: 35px; /* Further adjust button size */
-    height: 35px;
-  }
+/* Customize Scroll Bar */
+.note-display::-webkit-scrollbar {
+  width: 8px;
+}
 
-  .logo {
-    height: 3em; /* Adjust logo size for very small screens */
-  }
+.note-display::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
 
-  .field, .field-2 {
-    width: 100%; /* Full width for input fields */
-    margin: 0; /* Remove margin */
-    padding: 10px; /* Adjust padding */
-  }
+.note-display::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.note-input {
+  margin-top: 20px; /* Adjust spacing */
+  display: flex; /* Flex for input and button */
+  gap: 10px; /* Space between input and button */
+}
+
+.send-arrow {
+  padding: 10px 15px; /* Add padding for buttons */
+  border: none;
+  border-radius: 5px;
+  background-color: #001ead; /* Color for send button */
+  color: white;
+  cursor: pointer;
+}
+
+.send-arrow:hover {
+  background-color: #0056b3; /* Darker on hover */
+}
+.field-2{
+  background-color:white;
+  color: black;
+  width: 30%;
+  margin-right: 1080px;
+  position: relative;
+  bottom: 500px;
+}
+.groupName{
+  padding-bottom: 8px;
+
+}
+
+#text{
+  margin-top: 60px;
+  height: 20vh;
+  margin-left: 10px;
+}
+.send-arrow{
+  height:5vh;
+  margin-top: 230px;
 }

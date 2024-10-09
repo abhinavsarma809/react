@@ -9,11 +9,12 @@ function App() {
   const [selectedGroup, setSelectedGroup] = useState(null);
   const [notes, setNotes] = useState('');
 
-
+  // Toggle create group form visibility
   const toggleCountVisible = () => {
     setCountVisible((prev) => !prev);
   };
 
+  // Handle group creation
   const handleCreateGroup = () => {
     if (groupName && selectedColor) {
       const initials = groupName
@@ -29,12 +30,12 @@ function App() {
     }
   };
 
+  // Handle clicking on a group to select it
   const handleGroupClick = (group) => {
     setSelectedGroup(group);
-   
   };
 
-
+  // Handle sending a note to a selected group
   const handleSendNote = () => {
     if (selectedGroup && notes.trim()) {
       const now = new Date();
@@ -72,7 +73,7 @@ function App() {
       <div className="row">
         <h2 id="note">Pocket Notes</h2>
 
-      
+        {/* Group list */}
         <div className="group-list">
           {groups.map((group, index) => (
             <div
@@ -91,11 +92,12 @@ function App() {
           ))}
         </div>
 
-    
+        {/* "+" button to toggle count visible section */}
         <button id="add" onClick={toggleCountVisible}>+</button>
       </div>
 
       <div className="c2">
+        {/* Display notes section when a group is selected */}
         {selectedGroup ? (
           <div className="notepad">
             <div className="group-header">
@@ -107,8 +109,10 @@ function App() {
 
             <div className="note-display">
               {selectedGroup.notes.map((note, index) => (
-                <div key={index} className="note-item" style={{ color: note.color }}>
-                  <p>{note.text}</p>
+                <div key={index} className="note-item" style={{ backgroundColor: 'white', padding: '10px', marginBottom: '10px', borderRadius: '5px', color: note.color }}>
+                  {note.text.split('\n').map((line, i) => (
+                    <p key={i}>{line}</p>  // Display each part of the note on a new line
+                  ))}
                   <small style={{ color: 'gray', fontSize: 'smaller' }}>
                     {note.timestamp}
                   </small>
@@ -138,7 +142,7 @@ function App() {
           </div>
         )}
 
-        
+        {/* Display count visible section if countVisible is true */}
         {countVisible && (
           <div className="field-2">
             <p id="group">Create New Group<br /></p>
